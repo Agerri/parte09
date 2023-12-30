@@ -267,5 +267,9 @@ let apellidoMinuscula = apellido.toLowerCase();
 let apellidopos = apellidoMinuscula.substring(numeroletras - 1, numeroletras);
 
 console.log(
-  letraNombre.nombrepos.masculino + ", " + letraApellido.apellidopros.masculino
+  letraNombre[nombrepos].masculino +
+    ", " +
+    letraApellido[apellidopos].masculino +
+    " " +
+    fechaNacimiento[fechapos].masculino
 );

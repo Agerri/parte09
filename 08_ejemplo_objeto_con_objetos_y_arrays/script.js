@@ -18,3 +18,4 @@ let nombrePrimeraAsignatura = estudiante.asignaturas[0].nombre;
 
 console.log(nombreMascota);
 console.log(nombrePrimeraAsignatura);
+console.log(nombrePrimeraAsignatura);

@@ -162,11 +162,38 @@ let personas = {
   },
 };
 
-let respuesta = prompt("Escribe un nombre:");
+let name1 = "Bridgette McGuire";
+let name2 = "Melinda Wheele";
+let name3 = "Ward Fulton";
+let name4 = "Tessa Sellers";
+let name5 = "Kimberley Roberson";
+let name6 = "Eleanor Stafford";
+let name7 = "Crane Harris";
 
-while (respuesta == personas) {
-  console.log("El nombre no es correcto");
-  respuesta = prompt("Escribe un nombre::");
+let names = [name1, name2, name3, name4, name5, name6, name7];
+let num = 0;
+respuesta = prompt("Escribe un nombre:");
+for (let i = 0; i < 7; i++) {
+  if (respuesta == names[i]) {
+    num = num + 1;
+  }
 }
+if (num == 1) {
+  console.log(respuesta);
+} else {
+  console.log("Este nombre es incorrecto");
+}
+console.log(personas[respuesta].eyeColor);
 
-console.log(respuesta);
+document.querySelector("body").innerHTML = `
+    <div id="main">
+      <img src=personas[respuesta].picture id="image" />
+      <h1 id="title"/h1>
+      <p id="paragraph"/p>
+    </div>
+`;
+
+title = respuesta;
+paragraph = personas[respuesta];
+console.log(title);
+console.log(paragraph);

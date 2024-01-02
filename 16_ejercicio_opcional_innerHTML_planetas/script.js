@@ -99,7 +99,7 @@ respuestas[1] = prompt("Escribe el nombre otro planeta:");
 
 do {
   if (respuestas[1] == selecs[0]) {
-    respuestas[1] = prompt("Repetido. Escribe planeta:");
+    respuestas[1] = prompt("Repetido. Escribe otro planeta:");
   }
 
   do {
@@ -118,11 +118,11 @@ respuestas[2] = prompt("Escribe el nombre del último planeta:");
 
 do {
   if (respuestas[2] == selecs[0]) {
-    respuestas[2] = prompt("Repetido. Escribe planeta:");
+    respuestas[2] = prompt("Repetido. Escribe otro planeta:");
   }
   do {
     if (respuestas[2] == selecs[1]) {
-      respuestas[2] = prompt("Repetido. Escribe planeta:");
+      respuestas[2] = prompt("Repetido. Escribe otro planeta:");
     }
     do {
       for (let i = 0; i < 9; i++) {

@@ -77,22 +77,62 @@ let respuesta1;
 let respuesta2;
 let respuesta3;
 let respuestas = [respuesta1, respuesta2, respuesta3];
-let num = 0;
 
 let selec1;
 let selec2;
 let selec3;
 let selecs = [selec1, selec2, selec3];
 
-respuesta1 = prompt("Escribe el nombre de un planeta:");
+respuestas[0] = prompt("Escribe el nombre de un planeta:");
 do {
   for (let i = 0; i < 9; i++) {
-    if (respuesta1 == names[i]) {
-      selec1 = respuesta1;
+    if (respuestas[0] == names[i]) {
+      selecs[0] = respuestas[0];
     }
   }
-  respuesta1 = prompt("Incorrecto. Prueba de nuevo:");
-} while (respuesta1 != selec1);
+  if (selecs[0] != respuestas[0]) {
+    respuestas[0] = prompt("Incorrecto. Prueba de nuevo:");
+  }
+} while (respuestas[0] != selecs[0]);
 
-console.log(selec1);
-console.log(respuesta1);
+respuestas[1] = prompt("Escribe el nombre otro planeta:");
+
+do {
+  if (respuestas[1] == selecs[0]) {
+    respuestas[1] = prompt("Repetido. Escribe planeta:");
+  }
+
+  do {
+    for (let i = 0; i < 9; i++) {
+      if (respuestas[1] == names[i]) {
+        selecs[1] = respuestas[1];
+      }
+    }
+    if (selecs[1] != respuestas[1]) {
+      respuestas[1] = prompt("Incorrecto. Prueba de nuevo:");
+    }
+  } while (respuestas[1] != selecs[1]);
+} while (respuestas[1] == selecs[0]);
+
+respuestas[2] = prompt("Escribe el nombre del último planeta:");
+
+do {
+  if (respuestas[2] == selecs[0]) {
+    respuestas[2] = prompt("Repetido. Escribe planeta:");
+  }
+  do {
+    if (respuestas[2] == selecs[1]) {
+      respuestas[2] = prompt("Repetido. Escribe planeta:");
+    }
+    do {
+      for (let i = 0; i < 9; i++) {
+        if (respuestas[2] == names[i]) {
+          selecs[2] = respuestas[2];
+        }
+      }
+      if (selecs[2] != respuestas[2]) {
+        respuestas[2] = prompt("Incorrecto. Prueba de nuevo:");
+      }
+    } while (respuestas[2] != selecs[2]);
+  } while (respuestas[2] == selecs[1]);
+} while (respuestas[2] == selecs[0]);

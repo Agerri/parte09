@@ -3,7 +3,8 @@ let sistemaSolar = {
     nombre: "mercurio",
     color: "gris",
     temperatura: 350,
-    imagen: "https://www.astromia.com/fotosolar/fotos/planetamercurio.jpg",
+    imagen:
+      "https://www.nationalgeographic.com.es/medio/2022/07/31/el-planeta-mercurio_c7bafef8_1280x720.jpg",
   },
   venus: {
     nombre: "venus",
@@ -22,7 +23,8 @@ let sistemaSolar = {
     nombre: "marte",
     color: "rojo",
     temperatura: -46,
-    imagen: "https://www.planetario.net/wp-content/uploads/2019/07/marte-1.jpg",
+    imagen:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Schiaparelli_Hemisphere_Enhanced.jpg/800px-Schiaparelli_Hemisphere_Enhanced.jpg",
   },
   jupiter: {
     nombre: "jupiter",
@@ -139,20 +141,20 @@ document.querySelector("body").innerHTML = `
   <div id="main" style="display: flex; justify-content: space-around;">
     <div id="block1" style="background-color: blue; display: flex; flex-direction: column;justify-content: center; align-items: center;">
     <h1> ${sistemaSolar[selecs[0]].nombre}</h1>
-    <img src="${sistemaSolar[selecs[0]].imagen}"/>
+    <img width="350px" src="${sistemaSolar[selecs[0]].imagen}"/>
     <h2> ${sistemaSolar[selecs[0]].color}</h2>
     <h2> ${sistemaSolar[selecs[0]].temperatura}</h2>
     </div>
     
     <div id="block2" style="background-color: red; display: flex; flex-direction: column;justify-content: center; align-items: center;">
     <h1> ${sistemaSolar[selecs[1]].nombre}</h1>
-    <img src="${sistemaSolar[selecs[1]].imagen}"/>
+    <img width="350px" src="${sistemaSolar[selecs[1]].imagen}"/>
     <h2> ${sistemaSolar[selecs[1]].color}</h2>
     <h2> ${sistemaSolar[selecs[1]].temperatura}</h2>
     
     </div><div id="block3" style="background-color: green; display: flex; flex-direction: column;justify-content: center; align-items: center;">
     <h1> ${sistemaSolar[selecs[2]].nombre}</h1>
-    <img src="${sistemaSolar[selecs[2]].imagen}"/>
+    <img width="350px" src="${sistemaSolar[selecs[2]].imagen}"/>
     <h2> ${sistemaSolar[selecs[2]].color}</h2>
     <h2> ${sistemaSolar[selecs[2]].temperatura}</h2>
     </div>

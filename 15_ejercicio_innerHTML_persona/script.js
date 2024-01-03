@@ -165,10 +165,16 @@ let personas = {
 let personaname = prompt("Escribe un nombre:");
 if (personas[personaname]) {
   document.querySelector("body").innerHTML = `
-  <div>
+  <div id="total" style="display: flex; justify-content: center; align-items: center;">
+  <div id="block1" style="blackground-color: white;"></div>
+  <div id="main" style="background-color: ${personas[personaname].eyeColor}; display: flex; flex-direction: column;justify-content: center; align-items: center;">
   <img src="${personas[personaname].picture}"/>
   <h1> ${personas[personaname].name}</h1>
-  
+  <p> ${personas[personaname].age}</p>
+  <p> ${personas[personaname].email}</p>
+  <p> ${personas[personaname].address}</p>
+  </div>
+  <div id="block2" style="blackground-color: white;"></div>
   </div>
   `;
 }
